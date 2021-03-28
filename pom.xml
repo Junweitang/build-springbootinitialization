@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?> <!--XML头、指定了该xml文档的版本和编码方式-->
+
+<!--project是所有pom.xml的根元素，它还声明了一些pom相关的命名空间及xsd元素，这些元素不是必须的-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!--modelVersion:指定了当前pom模型的版本，对于Maven2及Maven3只能是4.0.0-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--groutpId定义了项目属于哪个组-->
+    <groupId>cn.t9.build</groupId>
+    <!--artifactId定义了当前Maven项目在组中唯一的ID-->
+    <artifactId>build-springbootinitialization</artifactId>
+    <!--version制定了springbootinitialization当前版本-->
+    <version>1.0-SNAPSHOT</version>
+    <!--Maven项目打包方式，默认打成jar包-->
+    <packaging>jar</packaging>
+    <name>springboot初始化项目</name>
+    <description>该项目为学习springboot、maven等第三方框架而搭建</description>
+
+    <!--定义Maven属性-->
+    <properties>
+        <junit.version>4.7</junit.version>
+    </properties>
+
+    <!--继承springboot依赖-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!--依赖,该元素下可以包含多个dependency元素以声明项目的依赖-->
+    <dependencies>
+        <!--groupId、artifactId、version是任何一个依赖的最基本的坐标-->
+        <!--scope指定依赖范围，test为只对测试生效，不声明默认complile对主代码和测试代码都有效-->
+
+        <!--测试-->
+        <!--junit:单元测试标准-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <!--引用Maven属性-->
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!--构建工具-->
+    <build>
+
+        <!--插件集合-->
+        <plugins>
+            <!--插件-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--仓库-->
+    <repositories>
+        <!--repository可声明一个或多个远程仓库-->
+        <repository>
+            <id>jboss</id>
+            <name>JBoss Repository</name>
+            <url>http://repository.jboss.com/maven3</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>

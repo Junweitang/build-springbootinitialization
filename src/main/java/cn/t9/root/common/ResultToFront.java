@@ -1,4 +1,4 @@
-package cn.ffcs.eda.mqmessage.common;
+package cn.t9.root.common;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

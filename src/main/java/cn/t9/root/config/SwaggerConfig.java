@@ -1,4 +1,4 @@
-package cn.ffcs.eda.mqmessage.config;
+package cn.t9.root.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -45,7 +45,7 @@ public class SwaggerConfig {
                 .enable(enableSwagger)
                 .select()
                 //扫描的路径包,设置basePackage会将包下的所有被@Api标记类的所有方法作为api
-                .apis(RequestHandlerSelectors.basePackage("cn.ffcs.eda.mqmessage.modules"))
+                .apis(RequestHandlerSelectors.basePackage("cn.t9.root.modules"))
                 //指定路径处理PathSelectors.any()代表所有的路径
                 .paths(PathSelectors.any())
                 .build()

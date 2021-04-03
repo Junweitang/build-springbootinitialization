@@ -1,4 +1,4 @@
-package cn.ffcs.eda.mqmessage.config;
+package cn.t9.root.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @version: v1.0
  */
 @Configuration
-@MapperScan("cn.ffcs.eda.mqmessage.modules.*.mapper")
+@MapperScan("cn.t9.root.modules.*.mapper")
 public class MybatisPlusConfig {
 
     @Bean

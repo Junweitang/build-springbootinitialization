@@ -1,4 +1,4 @@
-package cn.ffcs.eda.mqmessage.config;
+package cn.t9.root.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

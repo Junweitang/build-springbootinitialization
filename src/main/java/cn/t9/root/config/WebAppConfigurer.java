@@ -1,7 +1,6 @@
-package cn.ffcs.eda.mqmessage.config;
+package cn.t9.root.config;
 
-import cn.ffcs.eda.mqmessage.modules.system.filter.LoginTokenFilter;
-import cn.ffcs.eda.mqmessage.modules.system.filter.LoginTokenFilter;
+import cn.t9.root.modules.system.filter.LoginTokenFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

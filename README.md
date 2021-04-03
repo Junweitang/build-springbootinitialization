@@ -1,4 +1,4 @@
-# MQ消息项目
+# 构建-springboot初始化项目
 
 Version： 1.0.0  
 Author: junwei_tang  
@@ -7,7 +7,7 @@ Date: 2021-03-28
   
 项目介绍：  
     build-springbootinitialization项目  
-    构件springboot初始化项目
+    构建springboot初始化项目
       
 开发环境：   
     语言：JDK8  
